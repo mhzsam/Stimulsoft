@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StimulSoftReport", "StimulSoftReport\StimulSoftReport.csproj", "{DB6F86A2-70B5-4440-AE16-C07C83CB712C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB6F86A2-70B5-4440-AE16-C07C83CB712C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB6F86A2-70B5-4440-AE16-C07C83CB712C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB6F86A2-70B5-4440-AE16-C07C83CB712C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB6F86A2-70B5-4440-AE16-C07C83CB712C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F36E3409-0706-4E1C-AED3-784D2DBA1617}
+	EndGlobalSection
+EndGlobal

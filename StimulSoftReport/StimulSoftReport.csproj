@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="stimulsoft.reports.web.netcore" Version="2023.1.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="ReportFile\" />
+		<Folder Include="Packages\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Images\chiken.png">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Images\mhz.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="ReportFile\Report.mrt">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+
+	<!--this is copy when debug-->
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="xcopy /y /d &quot;$(ProjectDir)Packages\*.*&quot; &quot;$(ProjectDir)$(OutDir)&quot;" />
+	</Target>
+
+	<!--this is for copy after publish-->
+	<Target Name="CopyCrackOfStimulSoft" AfterTargets="Publish">
+		<!--select all files-->
+		<ItemGroup>
+			<ALLFILES Include="$(ProjectDir)Packages\**\*.*" />
+		</ItemGroup>
+		<!--than copy-->
+		<Copy SourceFiles="@(ALLFILES)" DestinationFolder="$(PublishDir)" />
+	</Target>
+
+</Project>
